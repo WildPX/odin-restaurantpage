@@ -131,6 +131,9 @@ header > nav > button {
 header > nav > button:hover {
   border-bottom-color: rgba(255, 255, 255, 0.75);
 }
+header > nav > button:active {
+  border-bottom-color: rgba(255, 255, 255, 0.8);
+}
 header > nav > button.nav-active {
   border-bottom-color: var(--default-color);
 }
