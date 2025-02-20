@@ -90,6 +90,7 @@ body {
   background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/67ae73ff-a2cb-4237-a2c9-105ec9f2694f/dg1nrsd-ce5ce9ff-e50c-4067-97bb-fa19c41d86a6.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY3YWU3M2ZmLWEyY2ItNDIzNy1hMmM5LTEwNWVjOWYyNjk0ZlwvZGcxbnJzZC1jZTVjZTlmZi1lNTBjLTQwNjctOTdiYi1mYTE5YzQxZDg2YTYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.DAR0RNF8DxRR_AtSo3nKTxGUa7Leb8JB6HC7iVmMSyE");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   background-position: center center;
   color: var(--default-color);
 }
@@ -177,7 +178,7 @@ section {
   display: grid;
   place-content: center;
   background-color: var(--default-background);
-  border: 0.25rem solid white;
+  border: 0.25rem solid var(--default-color);
   transition: background-color 0.5s, text-shadow 0.5s;
 }
 .title:hover {
@@ -226,17 +227,66 @@ section {
   display: flex;
   gap: var(--default-small-gap);
   flex-direction: column;
-  border: 0.25rem solid white;
+  border: 0.25rem solid var(--default-color);
   border-radius: var(--default-border-radius);
   background-color: var(--header-bg);
 }
 
 .standard-container > h2 {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--default-color);
   font-size: 1.5rem;
-  /* padding-left: 0.5rem; */
   font-weight: 700;
   letter-spacing: 0.1rem;
 }
 
-/* ABOUT PAGE */
+/* MENU PAGE */
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  display: grid;
+  grid-template: auto 1fr auto / 1fr auto;
+  padding: var(--default-small-padding);
+  gap: var(--default-gap);
+  background-color: var(--header-bg);
+  border-radius: var(--default-small-border-radius);
+  border: 0.15rem solid var(--default-color);
+}
+
+.card > h3 {
+  grid-area: 1 / 1 / 2 / 2;
+  letter-spacing: 0.1rem;
+  font-weight: 800;
+  border-left: 4px solid var(--default-color);
+  padding-left: 1rem;
+}
+
+.card > span {
+  display: block;
+  padding: 0.25rem;
+  border: 2px solid gold;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 8px 0px gold;
+  background-color: rgba(255, 215, 0, 0.1);
+  font-weight: bold;
+  text-align: center;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.card > p {
+  grid-area: 2 / 1 / 3 / 2;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+.card > img {
+  grid-area: 3 / 1 / 4 / 3;
+  object-fit: contain;
+  justify-self: center;
+  border: solid rgba(255, 255, 255, 1);
+  border-radius: var(--default-small-border-radius);
+}
