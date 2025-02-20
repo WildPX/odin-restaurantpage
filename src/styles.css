@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+/* CSS RESET (by Josh Comeau) */
+/* Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* Accessible line-height */
+  line-height: 1.5;
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* GENERAL STYLES */
+
+:root {
+  --default-color: #fff;
+  --default-background: #000;
+  --header-bg: rgba(0, 0, 0, 0.8);
+
+  --default-padding: 2rem;
+  --default-small-padding: 1rem;
+  --default-gap: 1rem;
+  --default-small-gap: 0.5rem;
+}
+
+body {
+  font-family: Oswald, system-ui, Helvetica, Arial, sans-serif;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/67ae73ff-a2cb-4237-a2c9-105ec9f2694f/dg1nrsd-ce5ce9ff-e50c-4067-97bb-fa19c41d86a6.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY3YWU3M2ZmLWEyY2ItNDIzNy1hMmM5LTEwNWVjOWYyNjk0ZlwvZGcxbnJzZC1jZTVjZTlmZi1lNTBjLTQwNjctOTdiYi1mYTE5YzQxZDg2YTYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.DAR0RNF8DxRR_AtSo3nKTxGUa7Leb8JB6HC7iVmMSyE");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: var(--default-color);
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: var(--default-small-padding);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+header > nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8rem;
+}
+
+header > nav > button {
+  border: none;
+  background-color: transparent;
+  color: var(--default-color);
+  font-size: 1.5rem;
+  border-bottom: 0.2rem solid transparent;
+}
+
+header > nav > button.active,
+header > nav > button:hover {
+  border-bottom-color: var(--default-color);
+}
+
+/* FOOTER */
+
+footer {
+  font-size: 1rem;
+  background-color: var(--header-bg);
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 0.25rem;
+}
