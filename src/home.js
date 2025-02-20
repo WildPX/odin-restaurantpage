@@ -1,8 +1,7 @@
-// import { clearPage } from "./utils";
-
 import { clearButtons } from "./utils";
 
 export function loadHome() {
+  // Reset content
   const content = document.getElementById("content");
   content.innerHTML = "";
 
@@ -22,6 +21,7 @@ export function loadHome() {
   descriptionsContainer.classList.add("descriptions-container");
   // | Orgnar Recommends
   const orgnarDiv = document.createElement("div");
+  orgnarDiv.classList.add("standard-container");
   const orgnarTitle = document.createElement("h2");
   orgnarTitle.textContent = "Orgnar Recommends!";
   const orgnarQuote = document.createElement("blockquote");
@@ -36,6 +36,7 @@ export function loadHome() {
 
   // | Hours
   const hoursDiv = document.createElement("div");
+  hoursDiv.classList.add("standard-container");
   const hoursTitle = document.createElement("h2");
   hoursTitle.textContent = "Hours";
   const hoursText = document.createElement("p");
@@ -46,6 +47,7 @@ export function loadHome() {
 
   // | Location
   const locationDiv = document.createElement("div");
+  locationDiv.classList.add("standard-container");
   const locationTitle = document.createElement("h2");
   locationTitle.textContent = "Location";
   const locationText = document.createElement("p");

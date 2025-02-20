@@ -1,9 +1,10 @@
 import "./styles.css";
 import { loadHome } from "./home";
+import { loadAbout } from "./about";
 
 function addNavEventListeners() {
   document.getElementById("nav-home").addEventListener("click", loadHome);
-  document.getElementById("nav-menu").addEventListener("click", loadMenu);
+  // document.getElementById("nav-menu").addEventListener("click", loadMenu);
   document.getElementById("nav-about").addEventListener("click", loadAbout);
 }
 

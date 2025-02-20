@@ -160,15 +160,16 @@ footer {
   padding: var(--default-padding);
 }
 
-/* HOME PAGE */
-
-.home-page {
+/* EVERY SECTION (HOME, MENU, ABOUT) */
+section {
   display: grid;
   grid-template-rows: auto 1fr;
   justify-items: center;
   align-items: center;
   gap: 2rem;
 }
+
+/* HOME PAGE */
 
 .title {
   width: max(40%, 400px);
@@ -198,25 +199,6 @@ footer {
   justify-items: center;
 }
 
-.descriptions-container > div {
-  width: max(60%, 400px);
-  padding: 1rem 2rem;
-  display: flex;
-  gap: var(--default-small-gap);
-  flex-direction: column;
-  border: 0.25rem solid white;
-  border-radius: var(--default-border-radius);
-  background-color: var(--header-bg);
-}
-
-.descriptions-container > div > h2 {
-  border-bottom: 2px solid white;
-  font-size: 1.5rem;
-  /* padding-left: 0.5rem; */
-  font-weight: 700;
-  letter-spacing: 0.1rem;
-}
-
 .descriptions-container blockquote {
   display: flex;
   justify-content: center;
@@ -235,3 +217,26 @@ footer {
   display: block;
   font-size: 2rem;
 }
+
+/* STANDARD CONTAINER */
+
+.standard-container {
+  width: max(60%, 400px);
+  padding: 1rem 2rem;
+  display: flex;
+  gap: var(--default-small-gap);
+  flex-direction: column;
+  border: 0.25rem solid white;
+  border-radius: var(--default-border-radius);
+  background-color: var(--header-bg);
+}
+
+.standard-container > h2 {
+  border-bottom: 2px solid white;
+  font-size: 1.5rem;
+  /* padding-left: 0.5rem; */
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+/* ABOUT PAGE */

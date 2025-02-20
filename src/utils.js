@@ -6,12 +6,11 @@ export function clearPage() {
 
 // Clears buttons from "active" class
 export function clearButtons() {
-  const btns = [];
-  btns.push(document.getElementById("nav-home"));
-  btns.push(document.getElementById("nav-menu"));
-  btns.push(document.getElementById("nav-about"));
-
-  btns.forEach((btn) => {
-    btn.classList.remove("active");
+  const buttons = ["nav-home", "nav-menu", "nav-about"];
+  buttons.forEach((id) => {
+    const button = document.getElementById(id);
+    if (button) {
+      button.classList.remove("nav-active");
+    }
   });
 }
