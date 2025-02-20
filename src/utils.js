@@ -1,11 +1,11 @@
 // This function clears the inner HTML of the element with the id "content"
-export const clearPage = () => {
+export function clearPage() {
   const content = document.getElementById("content");
   content.innerHTML = "";
-};
+}
 
 // Clears buttons from "active" class
-export const clearButtons = () => {
+export function clearButtons() {
   const btns = [];
   btns.push(document.getElementById("nav-home"));
   btns.push(document.getElementById("nav-menu"));
@@ -14,4 +14,4 @@ export const clearButtons = () => {
   btns.forEach((btn) => {
     btn.classList.remove("active");
   });
-};
+}

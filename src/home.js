@@ -2,7 +2,7 @@
 
 import { clearButtons } from "./utils";
 
-export const loadHome = () => {
+export function loadHome() {
   const content = document.getElementById("content");
   content.innerHTML = "";
 
@@ -69,4 +69,4 @@ export const loadHome = () => {
   clearButtons();
   const navHome = document.getElementById("nav-home");
   navHome.classList.add("nav-active");
-};
+}
